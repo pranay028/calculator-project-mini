@@ -29,12 +29,16 @@ body {
   height: 30rem;
 } */
 .text-top {
-  margin-bottom: 4rem;
+  position: absolute;
+  top: 3rem;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 1.2rem;
   text-align: center;
   padding: 0 1rem;
+}
+.sad {
+  font-weight: 800;
 }
 .instructions {
   position: absolute;
@@ -51,7 +55,8 @@ body {
   padding-left: 1.5rem;
   border-radius: 0.5rem;
   background-color: var(--primary-color);
-  box-shadow: 2px 2px 3px black, -2px -2px 3px black;
+  box-shadow: 5px 5px 3px var(--primary-color),
+    -3px -3px 3px var(--primary-color);
   animation: popup 400ms 1;
   /* animation: popdown 400ms 1; */
 }
@@ -86,7 +91,8 @@ li {
   /* display: inline; */
   /* position: relative; */
   margin-left: 9.5rem;
-  transform: translate(0, -0.5rem);
+  padding-top: -0.5rem;
+  /* transform: translate(0, -0.5rem); */
   width: 1.5rem;
   height: 1.8rem;
   cursor: pointer;
@@ -98,6 +104,9 @@ li {
 
   /* border: none; */
   /* z-index: 100; */
+}
+#close:hover {
+  transform: scale(1.07);
 }
 .help {
   position: relative;
@@ -131,11 +140,12 @@ li {
 .container {
   width: 24rem;
   height: 30rem;
-  border: black 0.2rem solid;
+  border: black 2.4px solid;
   border-radius: 1rem;
+  margin-top: -4rem;
   /* padding-bottom: 1rem;; */
   background-color: #26547c;
-  /* box-shadow: 5px 5px 3px black, -2px -2px 3px black; */
+  box-shadow: 7px 7px #26547c;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -148,6 +158,11 @@ li {
     "c c c d"
     "c c c d"
     "c c c d";
+}
+@media screen and (max-width: 600px) {
+  .container {
+    margin-top: 5rem;
+  }
 }
 /* .container > div {
   background-color: black;
@@ -171,10 +186,11 @@ li {
   display: flex;
   background: var(--primary-color);
   border-radius: 0.5rem;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   position: absolute;
   bottom: 1.3rem;
   width: 100%;
+  /* left: 3px; */
   height: 4rem;
   text-align: right;
   justify-content: flex-end;
@@ -188,17 +204,18 @@ li {
 }
 #displayadd {
   position: absolute;
-  display: flex;
-  align-items: flex-start;
+  /* display: flex;
+  align-items: flex-end; */
   top: 0.2rem;
   left: 0.5rem;
   height: 2.6rem;
   width: 10rem;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   background-color: var(--primary-color);
   border-radius: 0.5rem;
   font-size: 1.1rem;
   /* font-weight: 400; */
+  overflow-wrap: break-word;
 }
 
 .operator1 {
@@ -211,6 +228,8 @@ li {
 }
 .btn {
   background-color: #a1cdf4;
+  /* border: var(--primary-color); */
+  border-color: var(--primary-color);
 }
 .numbers {
   /* background-color: red; */
@@ -270,24 +289,6 @@ li {
   background-color: #86baa1;
 }
 
-/* .transition {
-  position: absolute;
-  background-color: black;
-  animation: anime 1000ms infinite;
-  transform: translate(-50px, -50px);
-  border-radius: 50%;
-  z-index: 1;
-}
-@keyframes anime {
-  0% {
-    width: 0px;
-    height: 0px;
-  }
-  100% {
-    width: 100px;
-    height: 100px;
-  }
-} */
 #lv {
   background-color: pink;
   font-size: 1.4rem;
@@ -312,6 +313,6 @@ li {
     background-color: var(--primary-color);
     /* border: 2px solid black; */
     z-index: 2;
-    transform: translate(10rem, -12rem);
+    transform: translate(10rem, -13rem);
   }
 }

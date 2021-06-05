@@ -68,6 +68,7 @@ helpEl.addEventListener("click", function(){
                 displayaddEl.textContent = "";
                 value = 0;
                 totalValue = 0;
+                idArray = []
 
             }else if(buttonsEl[i].className.includes("number")){
                 // console.log(buttonsEl[i].id);
@@ -118,6 +119,7 @@ helpEl.addEventListener("click", function(){
                 if(idArray[idArray.length - 1] == "add"){
                     
                     totalValue = newValue + value;
+                    
                     // displayaddEl.textContent = totalValue
                     
                     // listOperated.push(totalValue)
@@ -133,16 +135,17 @@ helpEl.addEventListener("click", function(){
                     console.log(totalValue);
 
                 }else if(idArray[idArray.length - 1] == "divide"){
-                    // if(listOperated[0] === 0) totalValue = 1;
+                  
                     console.log(newValue, value);
                     totalValue = newValue / value;
                     console.log(totalValue);
                 }else if(idArray[idArray.length - 1] == "percentile"){
-                    // if(listOperated[0] === 0) totalValue = 1;
+                   
                     console.log(newValue, value);
                     totalValue = newValue % value;
                     console.log(totalValue);
                 }
+                totalArray.push(totalValue);
                 
                 // displayEl.textContent = totalValue;
                 listOperated.push(totalValue)
@@ -151,18 +154,14 @@ helpEl.addEventListener("click", function(){
 
             } 
             if(buttonsEl[i].id == 'lv'){
-                document.querySelector(".sidedisplay").innerHTML = totalValue;
+                document.querySelector(".sidedisplay").innerHTML = totalArray[totalArray.length - 1];
+                // document.querySelector(".sidedisplay").innerHTML = totalValue;
 
             }
                 
                 // console.log(value);
                 // console.log(totalValue);
                 // console.log(listOperated);
-            
-                
-                // let forID = buttonsEl[i].classList.add("active");
-
-                // let calc = buttonsEl[i].id
                     
                 
             // console.log(idArray);  
@@ -173,19 +172,3 @@ helpEl.addEventListener("click", function(){
             //  console.log(displayEl.textContent);
     }
     
-
-// const calcMulti = function(x, y){
-//     return Number(x) * Number(y);
-// }
-// const calcDivide = function(){
-//     return x / y;
-// }
-// const calcPercentile = function(){
-//     return x % y;
-// }
-// const calcSubtract = function(){
-//     return y - x;
-// }
-// const calcAdd = function(){
-//     return x + y;
-// }
