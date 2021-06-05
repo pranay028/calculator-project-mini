@@ -57,7 +57,7 @@ body {
   background-color: var(--primary-color);
   box-shadow: 5px 5px 3px var(--primary-color),
     -3px -3px 3px var(--primary-color);
-  animation: popup 400ms 1;
+  animation: popup 500ms 1;
   /* animation: popdown 400ms 1; */
 }
 @keyframes popup {
