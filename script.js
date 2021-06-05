@@ -38,7 +38,7 @@ let value = 0;
 let listOperated = [];
 let idArray = [];
 let totalArray = []
-
+let totalidArray = [];
 closeEl.addEventListener("click", function(){
     instructionEl.classList.add("hidden");
     // instructionEl.style.animation = "popdown 400ms 1";
@@ -73,12 +73,17 @@ helpEl.addEventListener("click", function(){
             }else if(buttonsEl[i].className.includes("number")){
                 // console.log(buttonsEl[i].id);
                 // displayEl.textContent = "";
-                if(displayEl.textContent == totalValue) {
-                    displayEl.textContent = "";
+                if(totalidArray[totalidArray.length - 1] != dot)
+                    if(displayEl.textContent == totalValue) {
+                        displayEl.textContent = "";
+                    }
+                if(displayEl.textContent.includes(".") && buttonsEl[i].id == "dot"){
+                    
+                    value = Number(displayEl.textContent);
+                }else{
+                    displayEl.textContent += buttonsEl[i].textContent;
+                    value = Number(displayEl.textContent);
                 }
-                displayEl.textContent += buttonsEl[i].textContent;
-                value = Number(displayEl.textContent);
-                
             }else if(buttonsEl[i].className.includes("operate") && buttonsEl[i].id != "result"){
                 // x = value;
                                     
