@@ -36,6 +36,7 @@ body {
   font-size: 1.2rem;
   text-align: center;
   padding: 0 1rem;
+  padding-top: 0.5rem;
 }
 .sad {
   font-weight: 800;
@@ -199,10 +200,6 @@ li {
   align-items: flex-end;
   font-size: 2rem;
   overflow-wrap: break-word;
-
-  /* text-combine-upright: initial; */
-
-  /* margin-bottom: none; */
 }
 #displayadd {
   position: absolute;
@@ -233,6 +230,14 @@ li {
   /* border: var(--primary-color); */
   border-color: var(--primary-color);
 }
+@media screen and (max-width: 800px) {
+  .btn:active {
+    border-style: outset;
+  }
+}
+/* .btn:active {
+  border-style: outset;
+} */
 .numbers {
   /* background-color: red; */
   grid-area: c;
@@ -304,4 +309,27 @@ li {
   /* border: 2px solid black; */
   z-index: 2;
   transform: translate(10rem, -13rem);
+}
+/* .git-link {
+  text-transform: capitalize;
+  position: absolute;
+  top: 0.7rem;
+  font-weight: 500;
+  border: 1px solid rgb(3, 78, 3);
+  padding: 0.3rem 0.8rem;
+} */
+.git {
+  color: rgb(3, 78, 3);
+  text-transform: capitalize;
+  text-decoration: none;
+
+  position: absolute;
+  top: 1rem;
+  border: 2px solid rgb(3, 78, 3);
+  padding: 0.3rem 0.8rem;
+}
+.git:hover {
+  background-color: rgb(3, 78, 3);
+  color: white;
+  transition: all 400ms ease-in-out;
 }
