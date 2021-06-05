@@ -89,9 +89,9 @@ helpEl.addEventListener("click", function(){
                                     
                 let id = buttonsEl[i].id;
                 // let forID = buttonsEl[i].classList.add("active");
-                console.log(id);
+                // console.log(id);
                 
-                console.log(listOperated);
+                // console.log(listOperated);
                 // console.log(idArray[idArray.length - 1]);
                 // listOperated.push(value)
                 if(idArray.length >= 1){
@@ -135,20 +135,20 @@ helpEl.addEventListener("click", function(){
                     // displayEl.textContent = totalValue;
                     // listOperated.push(totalValue)}
                 }else if(idArray[idArray.length - 1] == "multi") {
-                    console.log(newValue, value);
+                    // console.log(newValue, value);
                     totalValue = newValue * value;
-                    console.log(totalValue);
+                    // console.log(totalValue);
 
                 }else if(idArray[idArray.length - 1] == "divide"){
                   
-                    console.log(newValue, value);
+                    // console.log(newValue, value);
                     totalValue = newValue / value;
-                    console.log(totalValue);
+                    // console.log(totalValue);
                 }else if(idArray[idArray.length - 1] == "percentile"){
                    
-                    console.log(newValue, value);
+                    // console.log(newValue, value);
                     totalValue = newValue % value;
-                    console.log(totalValue);
+                    // console.log(totalValue);
                 }
                 totalArray.push(totalValue);
                 
