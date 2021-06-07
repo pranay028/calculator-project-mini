@@ -332,5 +332,5 @@ li {
 .git:hover {
   background-color: rgb(3, 78, 3);
   color: white;
-  transition: all 400ms ease-in-out;
+  transition: all 4300ms ease-in-out;
 }
