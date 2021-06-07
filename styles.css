@@ -309,6 +309,7 @@ li {
   /* border: 2px solid black; */
   z-index: 2;
   transform: translate(10rem, -13rem);
+  font-size: 2rem;
 }
 /* .git-link {
   text-transform: capitalize;
