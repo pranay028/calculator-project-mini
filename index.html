@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CompuScooter</title>
+    <title>CompuScooter &reg;</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -15,41 +15,47 @@
         target="_blank"
         >git-repo</a
       >
+      <span><button class="help">?..</button></span>
     </p>
-    <span><button class="help">?..</button></span>
+
     <div class="instructions">
-      <p>
-        A set of notes before proceeding:<span
-          ><button class="close" id="close">X</button></span
-        >
-      </p>
+      <div class="instruction-container">
+        <p>
+          A set of notes before proceeding:<span
+            ><button class="close" id="close">X</button></span
+          >
+        </p>
 
-      <ul>
-        <li>
-          First of all, Remember this is still under development. There are many
-          limitations for this scooter.
-        </li>
-        <li>
-          Please try to break this machine. Report to me, I know there are many
-          bugs.
-        </li>
-        <li>Always use '=' for the result(for correct result).</li>
-        <li>Use 'Last Value' for the last result.</li>
-        <li>Using 'C' will clear the display.</li>
+        <ul>
+          <li>
+            Development has come to an end. if needed will update features
+            overtime.
+          </li>
+          <li>
+            Please try to break this machine. Report to me, I know there are
+            many bugs.
+          </li>
+          <!-- <li>Always use '=' for the result(for correct result).</li> -->
+          <li>Using 'CE' clears the last entry value</li>
+          <li>Using 'C' will clear the display.</li>
 
-        .....More incoming.
-      </ul>
+          .....More incoming.
+        </ul>
+      </div>
     </div>
     <span class="text-top">
-      This CompuScooter features enhance over time, still under development mode
-      &ensp;<span class="sad">:(</span>
+      This CompuScooter features enhance over time, &ensp;<span class="sad"
+        >😀</span
+      >
     </span>
-    <div class="sidedisplay"></div>
+
     <div class="wrapper">
       <div class="container">
-        <div class="display-warp">
-          <p>CompuScooter</p>
+        <!-- <p>CompuScooter &reg;</p> -->
+        <div class="display-wrap">
+          <!-- <p>CompuScooter &reg;</p> -->
           <div id="displayadd"></div>
+          <div class="sidedisplay"></div>
           <div class="display"></div>
         </div>
 
@@ -66,6 +72,9 @@
         </div>
         <div class="operator2">
           <div>
+            <button class="btn" id="clear-entry">CE</button>
+          </div>
+          <div>
             <button class="btn operate" id="percentile">%</button>
           </div>
           <div>
@@ -80,45 +89,45 @@
         </div>
         <div class="numbers">
           <div>
-            <button class="btn number" id="one">1</button>
+            <button class="btn number" id="seven" value="7">7</button>
           </div>
           <div>
-            <button class="btn number" id="two">2</button>
+            <button class="btn number" id="eight" value="8">8</button>
           </div>
           <div>
-            <button class="btn number" id="three">3</button>
+            <button class="btn number" id="nine" value="9">9</button>
           </div>
           <div>
-            <button class="btn number" id="four">4</button>
+            <button class="btn number" id="four" value="4">4</button>
           </div>
           <div>
-            <button class="btn number" id="five">5</button>
+            <button class="btn number" id="five" value="5">5</button>
           </div>
           <div>
-            <button class="btn number" id="six">6</button>
+            <button class="btn number" id="six" value="6">6</button>
           </div>
           <div>
-            <button class="btn number" id="seven">7</button>
+            <button class="btn number" id="one" value="1">1</button>
           </div>
           <div>
-            <button class="btn number" id="eight">8</button>
+            <button class="btn number" id="two" value="2">2</button>
           </div>
           <div>
-            <button class="btn number" id="nine">9</button>
+            <button class="btn number" id="three" value="3">3</button>
           </div>
           <div>
-            <button class="btn" id="lv">Last Value</button>
+            <button class="btn" id="none"></button>
           </div>
           <div>
-            <button class="btn number" id="zero">0</button>
+            <button class="btn number" id="zero" value="0">0</button>
           </div>
           <div>
-            <button class="btn number" id="dot">.</button>
+            <button class="btn number" id="dot" value=".">.</button>
           </div>
         </div>
       </div>
     </div>
 
-    <script src="./script.js"></script>
+    <script src="./script4.js"></script>
   </body>
 </html>
