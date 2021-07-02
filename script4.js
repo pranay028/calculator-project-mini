@@ -78,12 +78,6 @@ class Calculator {
       return this.multiply();
     }
   }
-  // result() {
-  //   console.log(operators[-2]);
-  //   return operators[-2];
-  //   //   displayaddEl.textContent = this.calculate(operators);
-  //   //   return this.calculate(operators(-1));
-  // }
 }
 
 let totalValue;
