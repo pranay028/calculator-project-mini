@@ -82,6 +82,7 @@ class Calculator {
 
 let totalValue;
 let newCal;
+let sideArray = [];
 
 // console.log(newCal);
 
@@ -125,12 +126,12 @@ operateEl.forEach((operator) => {
       Number(displayaddEl.textContent),
       Number(displayEl.textContent)
     );
+    //  checking the operator iin display and pushing operate to opeartions array
+    if (operate != operators.slice(-1)) operators.push(operate);
 
     //  setting operator in the display
     sidedisplayEl.textContent = operate;
-
-    //  checking the operator iin display and pushing operate to opeartions array
-    if (operate != operators.slice(-1)) operators.push(operate);
+    if (operate != "=") sideArray.push(operate);
 
     // checking if the top display for any value
     if (!displayaddEl.textContent) {
@@ -146,7 +147,7 @@ operateEl.forEach((operator) => {
       } else {
         // assigning opearte value to last value in the array
         operate = operators.slice(-2, -1);
-
+        // console.log(operate);
         totalValue = newCal.calculate(operate);
         displayEl.textContent = totalValue;
         displayaddEl.textContent = "";
@@ -154,11 +155,11 @@ operateEl.forEach((operator) => {
     } else {
       displayEl.textContent = "";
 
-      totalValue = newCal.calculate(operate);
+      totalValue = newCal.calculate(sideArray.slice(-2, -1));
     }
 
-    console.log(operators);
+    // console.log(operators);
 
-    console.log(totalValue);
+    // console.log(totalValue);
   });
 });
