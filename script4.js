@@ -153,6 +153,7 @@ operateEl.forEach((operator) => {
         displayaddEl.textContent = "";
       }
     } else {
+      if (displayEl.textContent == "") return;
       displayEl.textContent = "";
 
       totalValue = newCal.calculate(sideArray.slice(-2, -1));
